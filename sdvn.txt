@@ -15,11 +15,9 @@ ln -s /content/Extracontrolnet /content/SDVN/extensions/sd-webui-controlnet/mode
 
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/4x-UltraSharp.ckpt -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://stablediffusion.vn/wp-content/uploads/Colab/script/run_n_times.txt -d /content/SDVN/scripts -o run_n_times.py
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://stablediffusion.vn/wp-content/uploads/Colab/script/loopback_wave.txt -d /content/SDVN/scripts -o loopback_wave.py
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://stablediffusion.vn/wp-content/uploads/Colab/script/multi_frame_render.txt -d /content/SDVN/scripts -o multi_frame_render.py
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/params.txt -d /content/SDVN/ -o params.txt
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/ui-config.json -d /content/SDVN/ -o ui-config.json
+git clone https://github.com/camenduru/stable-diffusion-webui-scripts /content/SDVN/scripts
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/params.txt -d /content/SDVN/ -o params.txt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/4x-RealisticRescaler.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
 rm /content/SDVN/html/card-no-preview.png
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/card-no-preview.png -d /content/SDVN/html
