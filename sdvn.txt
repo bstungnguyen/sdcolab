@@ -1,6 +1,6 @@
-git clone -b v2-16 https://github.com/phamhungd/SDVN-Legacy /content/SDVN
-git clone -b v2-23 https://github.com/phamhungd/SDVN
-git clone -b v2-28 https://github.com/phamhungd/SDVN
+git clone -b v2-16 https://github.com/bstungnguyen/SDVNTN /content/SDVN
+git clone -b v2-23 https://github.com/bstungnguyen/SDVNTN
+git clone -b v2-28 https://github.com/bstungnguyen/SDVNTN
 git clone https://github.com/phamhungd/SDVN
 
 git clone -b oldver https://github.com/phamhungd/sd-webui-llul /content/SDVN/extensions/B-Llul
