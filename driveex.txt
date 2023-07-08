@@ -1,0 +1,21 @@
+git clone -b sdvn https://github.com/phamhungd/sd-webui-tunnels/
+git clone https://github.com/kohya-ss/sd-webui-additional-networks
+git clone https://github.com/Mikubill/sd-webui-controlnet 
+git clone https://github.com/fkunn1326/openpose-editor 
+git clone https://github.com/hako-mikan/sd-webui-lora-block-weight 
+git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper 
+git clone https://github.com/hako-mikan/sd-webui-supermerger 
+git clone https://github.com/adieyal/sd-dynamic-prompts 
+git clone https://github.com/zanllp/sd-webui-infinite-image-browsing  
+git clone https://github.com/AbdullahAlfaraj/Auto-Photoshop-StableDiffusion-Plugin.git 
+git clone https://github.com/ashen-sensored/stable-diffusion-webui-two-shot 
+git clone https://github.com/AIrjen/OneButtonPrompt 
+git clone https://github.com/ParisNeo/prompt_translator 
+git clone https://github.com/hako-mikan/sd-webui-regional-prompter
+git clone https://github.com/Bing-su/Adetailer 
+git clone -b sdvn https://github.com/phamhungd/sd-civitai-browser
+git clone https://github.com/s0md3v/sd-webui-roop
+git clone https://github.com/huchenlei/sd-webui-openpose-editor
+git clone https://github.com/mcmonkeyprojects/sd-dynamic-thresholding
+git clone https://github.com/ashen-sensored/sd_webui_SAG
+git clone https://git.mmaker.moe/mmaker/sd-webui-color-enhance.git

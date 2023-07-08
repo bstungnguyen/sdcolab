@@ -1,0 +1,3 @@
+git clone https://github.com/arenasys/stable-diffusion-webui-model-toolkit /content/SDVN/extensions/Model-toolkit
+#git clone https://github.com/s0md3v/sd-webui-roop /content/SDVN/extensions/Roop
+#git clone https://github.com/richrobber2/canvas-zoom /content/SDVN/extensions/Canvas-zoom

@@ -1,0 +1,11 @@
+git clone https://github.com/ljleb/prompt-fusion-extension /content/SDVN/extensions/Prompt-fusion
+git clone https://github.com/a2569875/stable-diffusion-webui-composable-lora /content/SDVN/extensions/Composable-lora
+git clone https://github.com/butaixianran/Stable-Diffusion-Webui-Civitai-Helper /content/SDVN/extensions/Civitai-Helper
+git clone https://github.com/jexom/sd-webui-depth-lib /content/SDVN/extensions/Depth-lib
+git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor /content/SDVN/extensions/3D-Pose  
+git clone https://github.com/Physton/sd-webui-prompt-all-in-one /content/SDVN/extensions/Prompt-all-in-one
+git clone https://github.com/muerrilla/stable-diffusion-NPW /content/SDVN/extensions/NPW
+git clone https://github.com/continue-revolution/sd-webui-segment-anything /content/SDVN/extensions/Segment-anything
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth -d /content/SDVN/models/sam -o sam_vit_l_0b3195.pth
+git clone https://github.com/Uminosachi/sd-webui-inpaint-anything /content/SDVN/extensions/Inpaint-anything
+git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler /content/SDVN/extensions/Agent-scheduler
