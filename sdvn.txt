@@ -39,15 +39,15 @@ mkdir /content/drive/MyDrive/SD-Data/Lora
 mkdir /content/drive/MyDrive/SD-Data/Embeddings
 mkdir /content/drive/MyDrive/SD-Data/wildcards
 mkdir /content/drive/MyDrive/SD-Data/Hypernetworks
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/config.json -d /content/drive/MyDrive/SD-Data/Setting15 -o config.json
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/config.json -d /content/drive/MyDrive/SD-Data/Setting15 -o config.json
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
 mkdir /content/drive/MyDrive/SD-Data/Lyco
 rm /content/drive/MyDrive/SD-Data/Setting15/style.csv
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
   
 rm -r /content/drive/MyDrive/SD-Data/Setting15
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/config.json -d /content/drive/MyDrive/SD-Data/Setting15 -o config.json
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/config.json -d /content/drive/MyDrive/SD-Data/Setting15 -o config.json
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
 
 git clone https://huggingface.co/phamhungd/clone /content/clone
 git clone https://github.com/phamhungd/WC-SDVN /content/WC-SDVN
