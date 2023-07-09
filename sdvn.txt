@@ -22,10 +22,10 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://hugging
 rm /content/SDVN/html/card-no-preview.png
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/card-no-preview.png -d /content/SDVN/html
 rm /content/SDVN/style.css
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/style.css -d /content/SDVN/
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/localization.json -d /content/SDVN/localizations
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/style.css -d /content/SDVN/
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/localization.json -d /content/SDVN/localizations
 rm /content/SDVN/html/footer.html
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/footer.txt -d /content/SDVN/html -o footer.html
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/footer.txt -d /content/SDVN/html -o footer.html
 
 #aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors -d /content/SDVN/models/Stable-diffusion -o VAE56.vae.pt
 #aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Waifu-anime.vae.pt -d /content/SDVN/models/Stable-diffusion -o Waifu-anime.vae.pt
