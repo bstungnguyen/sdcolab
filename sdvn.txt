@@ -78,3 +78,6 @@ rm -r /content/SDVN/extensions/Additional-networks
 rm -r /content/SDVN/extensions/Dynamic-prompts
 rm -r /content/SDVN/extensions/Block-weight
 rm -r /content/SDVN/extensions/Faceswap
+#Private Extension & NgrokToken
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v2/fullver/MyExtensionList.txt -d /content/drive/MyDrive/SD-Data/wildcards -o MyExtensionList.txt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v2/fullver/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
