@@ -68,7 +68,7 @@ git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-locon /content/SDVN/e
 
 extensions/sd-webui-controlnet/models
 git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris
-
+#DeforumMode == True and Extensions == video
 rm -r /content/SDVN/extensions/A0-LLui
 rm -r /content/SDVN/extensions/A1-Prompt_translator
 rm -r /content/SDVN/extensions/A2-Adetailer
