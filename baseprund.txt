@@ -1,4 +1,4 @@
-#git clone https://github.com/phamhungd/sd-webui-tunnels/ /content/SDVN/extensions/Tunnels
+git clone https://github.com/phamhungd/sd-webui-tunnels/ /content/SDVN/extensions/Tunnels
 git clone https://github.com/Mikubill/sd-webui-controlnet /content/SDVN/extensions/sd-webui-controlnet
 git clone https://github.com/fkunn1326/openpose-editor /content/SDVN/extensions/Openpose-editor
 git clone https://github.com/phamhungd/sd-webui-lora-block-weight /content/SDVN/extensions/Block-weight
@@ -8,3 +8,15 @@ git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris /content/SDVN
 git clone https://github.com/hako-mikan/sd-webui-regional-prompter /content/SDVN/extensions/A6-Regional-prompter
 git clone https://github.com/Bing-su/Adetailer /content/SDVN/extensions/A2-Adetailer
 git clone https://github.com/hako-mikan/sd-webui-supermerger /content/SDVN/extensions/Supermerger
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.pth -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.yaml -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.pth -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.yaml -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_lineart.pth -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_lineart.yaml -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.pth -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.yaml -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_softedge.pth -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_softedge.yaml -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/TencentARC/T2I-Adapter/resolve/main/models/t2iadapter_color_sd14v1.pth -d /content/Basecontrolnet
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/TencentARC/T2I-Adapter/resolve/main/models/t2iadapter_style_sd14v1.pth -d /content/Basecontrolnet
