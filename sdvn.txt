@@ -61,8 +61,8 @@ rm /content/drive/MyDrive/SD-Data/wildcards/WC-SDVN
 ln -s /content/WC-SDVN /content/drive/MyDrive/SD-Data/wildcards
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/110431 -d /content/SDVN/models/Stable-diffusion -o SDVN3-RealArt.safetensors
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/SDVN3-RealArt.jpg -d /content/SDVN/models/Stable-diffusion
+ln -s /content/SDVN/models/Stable-diffusion /content/drive/MyDrive/SD-Data/Model
 git clone -b fullver https://github.com/phamhungd/sdvn-auto /content/SDVN
-
 git clone https://github.com/camenduru/a1111-sd-webui-locon /content/SDVN/extensions/A1111-Locon
 git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-locon /content/SDVN/extensions/A1111-Locon
 
