@@ -81,3 +81,10 @@ rm -r /content/SDVN/extensions/Faceswap
 #Private Extension & NgrokToken
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v2/fullver/MyExtensionList.txt -d /content/drive/MyDrive/SD-Data/wildcards -o MyExtensionList.txt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v2/fullver/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
+
+git clone -b v2-16 https://github.com/bstungnguyen/SDVNTN /content/tempSDVN
+git clone -b v2-23 https://github.com/bstungnguyen/SDVNTN /content/tempSDVN
+git clone -b v2-28 https://github.com/bstungnguyen/SDVNTN /content/tempSDVN
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /content/tempSDVN
+mv tempSDVN/.git SDVN/.git
+rm -rf temp
