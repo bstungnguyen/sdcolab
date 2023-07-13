@@ -42,4 +42,4 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://hugging
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/TencentARC/T2I-Adapter/resolve/main/models/t2iadapter_sketch_sd15v2.pth -d /content/Basecontrolnet
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/TencentARC/T2I-Adapter/resolve/main/models/t2iadapter_zoedepth_sd15v1.pth -d /content/Basecontrolnet
 
-ln -s /content/Basecontrolnet /content/SDVN/extensions/sd-webui-controlnet/models/
+ln -s /content/SDVN/extensions/sd-webui-controlnet/models /content/Basecontrolnet/
