@@ -15,8 +15,17 @@ pip install -q xformers==0.0.19 triton==2.0.0 -U
 git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /content/SDVN
 git clone https://huggingface.co/embed/negative /content/SDVN/embeddings/negative
 git clone https://huggingface.co/embed/lora /content/SDVN/models/Lora/positive
-#aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
-wget https://raw.githubusercontent.com/camenduru/stable-diffusion-webui-scripts/main/run_n_times.py -O /content/SDVN/scripts/run_n_times.py
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/holwech/realistic-rescaler-real-esrgan/resolve/main/4x_RealisticRescaler_100000_G.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
+git clone https://github.com/camenduru/stable-diffusion-webui-scripts /content/SDVN/scripts
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/params.txt -d /content/SDVN/ -o params.txt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors -d /content/SDVN/models/Stable-diffusion -o sdxl_vae.pt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors -d /content/SDVN/models/Stable-diffusion -o VAE56.vae.pt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Waifu-anime.vae.pt -d /content/SDVN/models/Stable-diffusion -o Waifu-anime.vae.pt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Anime-fp16.vae.pt -d /content/SDVN/models/Stable-diffusion -o Anime.vae.pt
+
 #git clone https://github.com/deforum-art/deforum-for-automatic1111-webui /content/SDVN/extensions/deforum-for-automatic1111-webui
 #git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser /content/SDVN/extensions/stable-diffusion-webui-images-browser
 #git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /content/SDVN/extensions/stable-diffusion-webui-huggingface
