@@ -59,8 +59,8 @@ git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions
 #aria2c --console-log-level=error -c -x 16 -k 1M -s 16 https://huggingface.co/ckpt/ControlNet/raw/main/cldm_v21.yaml -d /content/SDVN/extensions/sd-webui-controlnet/models -o openpose-sd21-safe.yaml
 #aria2c --console-log-level=error -c -x 16 -k 1M -s 16 https://huggingface.co/ckpt/ControlNet/raw/main/cldm_v21.yaml -d /content/SDVN/extensions/sd-webui-controlnet/models -o scribble-sd21-safe.yaml
 
-#aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/acheong08/f222/resolve/main/f222.safetensors -d /content/SDVN/models/Stable-diffusion -o f222.safetensors
-#aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/stable-diffusion-2-base/raw/main/v2-inference.yaml -d /content/SDVN/models/Stable-diffusion -o 512-base-ema.yaml
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/stable-diffusion-2-1/resolve/main/v2-1_768-ema-pruned.ckpt -d /content/stable-diffusion-webui/models/Stable-diffusion -o v2-1_768-ema-pruned.ckpt
+aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/stable-diffusion-2-1/raw/main/v2-inference-v.yaml -d /content/stable-diffusion-webui/models/Stable-diffusion -o v2-1_768-ema-pruned.yaml
 
 sed -i -e '''/from modules import launch_utils/a\import os''' /content/SDVN/launch.py
 sed -i -e '''/        prepare_environment()/a\        os.system\(f\"""sed -i -e ''\"s/dict()))/dict())).cuda()/g\"'' /content/SDVN/repositories/stable-diffusion-stability-ai/ldm/util.py""")''' /content/SDVN/launch.py
