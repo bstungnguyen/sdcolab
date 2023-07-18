@@ -12,20 +12,21 @@ apt -y install -qq aria2 libcairo2-dev pkg-config python3-dev
 pip install -q torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1+cu118 torchtext==0.15.1 torchdata==0.6.0 --extra-index-url https://download.pytorch.org/whl/cu118 -U
 pip install -q xformers==0.0.19 triton==2.0.0 -U
 
-git clone -b v2-28 https://github.com/bstungnguyen/SDVNTN /content/SDVN
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /content/SDVN
 git clone https://huggingface.co/embed/negative /content/SDVN/embeddings/negative
 git clone https://huggingface.co/embed/lora /content/SDVN/models/Lora/positive
 aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/holwech/realistic-rescaler-real-esrgan/resolve/main/4x_RealisticRescaler_100000_G.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
+#aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/holwech/realistic-rescaler-real-esrgan/resolve/main/4x_RealisticRescaler_100000_G.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
 git clone https://github.com/camenduru/stable-diffusion-webui-scripts /content/SDVN/scripts
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/params.txt -d /content/SDVN/ -o params.txt
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors -d /content/SDVN/models/Stable-diffusion -o sdxl_vae.pt
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.safetensors -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors -d /content/SDVN/models/Stable-diffusion -o VAE56.vae.pt
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Waifu-anime.vae.pt -d /content/SDVN/models/Stable-diffusion -o Waifu-anime.vae.pt
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Anime-fp16.vae.pt -d /content/SDVN/models/Stable-diffusion -o Anime.vae.pt
+#aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
+#aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sdxl-vae/resolve/main/sdxl_vae.safetensors -d /content/SDVN/models/Stable-diffusion -o sdxl_vae.pt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
+#aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors -d /content/SDVN/models/Stable-diffusion -o VAE56.vae.pt
+#aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Waifu-anime.vae.pt -d /content/SDVN/models/Stable-diffusion -o Waifu-anime.vae.pt
+#aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Anime-fp16.vae.pt -d /content/SDVN/models/Stable-diffusion -o Anime.vae.pt
 
+git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
 #git clone https://github.com/deforum-art/deforum-for-automatic1111-webui /content/SDVN/extensions/deforum-for-automatic1111-webui
 #git clone https://github.com/AlUlkesh/stable-diffusion-webui-images-browser /content/SDVN/extensions/stable-diffusion-webui-images-browser
 #git clone https://github.com/camenduru/stable-diffusion-webui-huggingface /content/SDVN/extensions/stable-diffusion-webui-huggingface
@@ -36,7 +37,6 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://hugging
 #git clone https://github.com/jexom/sd-webui-depth-lib /content/SDVN/extensions/sd-webui-depth-lib
 #git clone https://github.com/hnmr293/posex /content/SDVN/extensions/posex
 #git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor /content/SDVN/extensions/sd-webui-3d-open-pose-editor
-git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
 #git clone https://github.com/etherealxx/batchlinks-webui /content/SDVN/extensions/batchlinks-webui
 #git clone https://github.com/catppuccin/stable-diffusion-webui /content/SDVN/extensions/stable-diffusion-webui-catppuccin
 #git clone https://github.com/camenduru/a1111-sd-webui-locon /content/SDVN/extensions/a1111-sd-webui-locon
@@ -59,7 +59,7 @@ git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions
 #aria2c --console-log-level=error -c -x 16 -k 1M -s 16 https://huggingface.co/ckpt/ControlNet/raw/main/cldm_v21.yaml -d /content/SDVN/extensions/sd-webui-controlnet/models -o openpose-sd21-safe.yaml
 #aria2c --console-log-level=error -c -x 16 -k 1M -s 16 https://huggingface.co/ckpt/ControlNet/raw/main/cldm_v21.yaml -d /content/SDVN/extensions/sd-webui-controlnet/models -o scribble-sd21-safe.yaml
 
-aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/acheong08/f222/resolve/main/f222.safetensors -d /content/SDVN/models/Stable-diffusion -o f222.safetensors
+#aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/acheong08/f222/resolve/main/f222.safetensors -d /content/SDVN/models/Stable-diffusion -o f222.safetensors
 #aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckpt/stable-diffusion-2-base/raw/main/v2-inference.yaml -d /content/SDVN/models/Stable-diffusion -o 512-base-ema.yaml
 
 sed -i -e '''/from modules import launch_utils/a\import os''' /content/SDVN/launch.py
