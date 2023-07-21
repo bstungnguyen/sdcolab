@@ -1,9 +1,3 @@
-import subprocess
-from IPython.display import display, HTML
-from PIL import Image
-html="<h1><code>BẮT ĐẦU CÀI ĐẶT CHƯƠNG TRÌNH - VUI LÒNG ĐỢI ...</code></h1><h3><code>☕️ Pha một ly cà phê đợi 10 phút nữa nhé ...</code></h3><h3><code>☕️ Hãy để ý nháy vào đường dẫn <a>gradio.live</a> để sử dụng</code></h3><p>_________</p>"
-display(HTML(html))
-
 apt -y update -qq
 wget http://launchpadlibrarian.net/367274644/libgoogle-perftools-dev_2.5-2.2ubuntu3_amd64.deb
 wget https://launchpad.net/ubuntu/+source/google-perftools/2.5-2.2ubuntu3/+build/14795286/+files/google-perftools_2.5-2.2ubuntu3_all.deb
@@ -17,3 +11,30 @@ rm *.deb
 apt -y install -qq aria2 libcairo2-dev pkg-config python3-dev
 pip install -q torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1+cu118 torchtext==0.15.1 torchdata==0.6.0 --extra-index-url https://download.pytorch.org/whl/cu118 -U
 pip install -q xformers==0.0.19 triton==2.0.0 -U
+
+git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
+git clone https://huggingface.co/embed/negative /content/SDVN/embeddings/negative
+git clone https://huggingface.co/embed/lora /content/SDVN/models/Lora/positive
+sample= !ls /content/drive/MyDrive/SD-Data/Lyco
+if sample == ["ls: cannot access '/content/drive/MyDrive/SD-Data/Lyco': No such file or directory"] :
+  print("Khởi tạo thư mục lần đầu")
+   mkdir /content/drive/MyDrive/SD-Data/
+   mkdir /content/drive/MyDrive/SD-Data/Model
+   mkdir /content/drive/MyDrive/SD-Data/Lora
+   mkdir /content/drive/MyDrive/SD-Data/Embeddings
+   mkdir /content/drive/MyDrive/SD-Data/Lyco
+   mkdir /content/drive/MyDrive/SD-Data/wildcards
+   mkdir /content/drive/MyDrive/SD-Data/Hypernetworks
+sudo apt-get install aria2
+rm /content/SDVN/ui-config.json
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
+rm /content/SDVN/style.css
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/style.css -d /content/SDVN/
+
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/65898 -d /content/SDVN/models/Stable-diffusion -o SDVN-Real-v2.ckpt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
+
+ln -s /content/SDVN/models/Stable-diffusion /content/drive/MyDrive/SD-Data/Model
+ln -s /content/SDVN/models/Lora /content/drive/MyDrive/SD-Data/Lora
+ln -s /content/SDVN/embeddings /content/drive/MyDrive/SD-Data/Embeddings
+ln -s /content/SDVN/models/Lora /content/drive/MyDrive/SD-Data/Lyco
