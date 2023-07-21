@@ -1,0 +1,4 @@
+git clone -b v2-16 https://github.com/bstungnguyen/SDVNTN /content/SDVN
+git clone -b v2-23 https://github.com/bstungnguyen/SDVNTN /content/SDVN
+git clone -b v2-28 https://github.com/bstungnguyen/SDVNTN /content/SDVN
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui /content/SDVN
