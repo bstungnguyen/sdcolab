@@ -12,9 +12,9 @@ apt -y install -qq aria2 libcairo2-dev pkg-config python3-dev
 pip install -q torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1+cu118 torchtext==0.15.1 torchdata==0.6.0 --extra-index-url https://download.pytorch.org/whl/cu118 -U
 pip install -q xformers==0.0.19 triton==2.0.0 -U
 
-git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
-git clone https://huggingface.co/embed/negative /content/SDVN/embeddings/negative
-git clone https://huggingface.co/embed/lora /content/SDVN/models/Lora/positive
+git pull https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
+git pull https://huggingface.co/embed/negative /content/SDVN/embeddings/negative
+git pull https://huggingface.co/embed/lora /content/SDVN/models/Lora/positive
 
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/ui-config.json -d /content/SDVN/ -o ui-config.json
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/style.css -d /content/SDVN/
