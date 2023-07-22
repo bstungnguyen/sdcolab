@@ -30,7 +30,7 @@ rm /content/SDVN/ui-config.json
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
 rm /content/SDVN/style.css
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/style.css -d /content/SDVN/
-
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/117136 -d /content/SDVN/models/Stable-diffusion -o SDVN3-RealArt.safetensors
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
 
