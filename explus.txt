@@ -9,3 +9,4 @@ git clone https://github.com/continue-revolution/sd-webui-segment-anything /cont
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth -d /content/SDVN/models/sam -o sam_vit_l_0b3195.pth
 git clone https://github.com/Uminosachi/sd-webui-inpaint-anything /content/SDVN/extensions/Inpaint-anything
 git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler /content/SDVN/extensions/Agent-scheduler
+git clone https://github.com/ashen-sensored/sd_webui_SAG /content/SDVN/extensions/SAG
