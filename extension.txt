@@ -1,0 +1,57 @@
+#baseprund
+git clone https://github.com/Mikubill/sd-webui-controlnet /content/SDVN/extensions/sd-webui-controlnet
+git clone https://github.com/fkunn1326/openpose-editor /content/SDVN/extensions/Openpose-editor
+git clone https://github.com/hako-mikan/sd-webui-lora-block-weight /content/SDVN/extensions/Block-weight
+git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper /content/SDVN/extensions/AR-helper
+git clone https://github.com/adieyal/sd-dynamic-prompts /content/SDVN/extensions/Dynamic-prompts
+git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris /content/SDVN/extensions/Lycoris
+git clone https://github.com/hako-mikan/sd-webui-regional-prompter /content/SDVN/extensions/A6-Regional-prompter
+git clone https://github.com/Bing-su/Adetailer /content/SDVN/extensions/A2-Adetailer
+git clone https://github.com/hako-mikan/sd-webui-supermerger /content/SDVN/extensions/Supermerger
+#base
+git clone https://github.com/kohya-ss/sd-webui-additional-networks /content/SDVN/extensions/Additional-networks
+git clone https://github.com/ashen-sensored/stable-diffusion-webui-two-shot /content/SDVN/extensions/A5-Two-shot
+git clone https://github.com/AIrjen/OneButtonPrompt /content/SDVN/extensions/OneButtonPrompt
+git clone https://github.com/ParisNeo/prompt_translator /content/SDVN/extensions/A1-Prompt_translator
+git clone https://github.com/Vetchems/sd-civitai-browser /content/SDVN/extensions/Civitai
+git clone https://github.com/huchenlei/sd-webui-openpose-editor /content/SDVN/extensions/OpenposeEditor
+git clone https://github.com/mcmonkeyprojects/sd-dynamic-thresholding /content/SDVN/extensions/Dynamic-CFG
+git clone https://git.mmaker.moe/mmaker/sd-webui-color-enhance.git /content/SDVN/extensions/Color-enhance
+git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete /content/SDVN/extensions/Tagcomplete
+git clone https://github.com/IntellectzProductions/sd-webui-faceswap /content/SDVN/extensions/RoopSD
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/datasets/bstungnguyen/Deepfake/resolve/main/inswapper_128.onnx -d /content/SDVN/models/RoopSD -o inswapper_128.onnx
+#plus
+git clone https://github.com/ljleb/prompt-fusion-extension /content/SDVN/extensions/Prompt-fusion
+git clone https://github.com/a2569875/stable-diffusion-webui-composable-lora /content/SDVN/extensions/Composable-lora
+git clone https://github.com/butaixianran/Stable-Diffusion-Webui-Civitai-Helper /content/SDVN/extensions/Civitai-Helper
+git clone https://github.com/jexom/sd-webui-depth-lib /content/SDVN/extensions/Depth-lib
+git clone https://github.com/nonnonstop/sd-webui-3d-open-pose-editor /content/SDVN/extensions/3D-Pose  
+git clone https://github.com/Physton/sd-webui-prompt-all-in-one /content/SDVN/extensions/Prompt-all-in-one
+git clone https://github.com/muerrilla/stable-diffusion-NPW /content/SDVN/extensions/NPW
+git clone https://github.com/continue-revolution/sd-webui-segment-anything /content/SDVN/extensions/Segment-anything
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://dl.fbaipublicfiles.com/segment_anything/sam_vit_l_0b3195.pth -d /content/SDVN/models/sam -o sam_vit_l_0b3195.pth
+git clone https://github.com/Uminosachi/sd-webui-inpaint-anything /content/SDVN/extensions/Inpaint-anything
+git clone https://github.com/ArtVentureX/sd-webui-agent-scheduler /content/SDVN/extensions/Agent-scheduler
+git clone https://github.com/ashen-sensored/sd_webui_SAG /content/SDVN/extensions/SAG
+#train
+git clone https://github.com/ddPn08/kohya-sd-scripts-webui /content/SDVN/extensions/kohya-sd-scripts-webui
+git clone https://github.com/arenasys/stable-diffusion-webui-model-toolkit /content/SDVN/extensions/Model-toolkit
+git clone https://github.com/klimaleksus/stable-diffusion-webui-embedding-merge /content/SDVN/extensions/Embedding-merge
+git clone https://github.com/Akegarasu/sd-webui-model-converter /content/SDVN/extensions/Model-converter
+git clone https://github.com/tkalayci71/embedding-inspector /content/SDVN/extensions/Embedding-inspector
+git clone https://github.com/bbc-mc/sdweb-merge-board /content/SDVN/extensions/Merge-board
+#video
+git clone https://github.com/Winfredy/SadTalker /content/SDVN/extensions/SadTalker
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/mapping_00109-model.pth.tar -d /content/SDVN/extensions/SadTalker/checkpoints -o mapping_00109-model.pth.tar
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/mapping_00229-model.pth.tar -d /content/SDVN/extensions/SadTalker/checkpoints -o mapping_00229-model.pth.tar
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/SadTalker_V0.0.2_256.safetensors -d /content/SDVN/extensions/SadTalker/checkpoints -o SadTalker_V0.0.2_256.safetensors
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://github.com/OpenTalker/SadTalker/releases/download/v0.0.2-rc/SadTalker_V0.0.2_512.safetensors -d /content/SDVN/extensions/SadTalker/checkpoints -o SadTalker_V0.0.2_512.safetensors
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://github.com/OpenTalker/SadTalker/archive/refs/tags/v0.0.2-rc.zip -d /content/SDVN/extensions/SadTalker/checkpoints -o v0.0.2-rc.zip
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://github.com/OpenTalker/SadTalker/archive/refs/tags/v0.0.2-rc.tar.gz -d /content/SDVN/extensions/SadTalker/checkpoints -o v0.0.2-rc.tar.gz
+git clone https://github.com/v8hid/infinite-zoom-automatic1111-webui /content/SDVN/extensions/Infinite-zoom
+git clone https://github.com/Scholar01/sd-webui-mov2mov /content/SDVN/extensions/Mov2mov
+git clone https://github.com/CiaraStrawberry/TemporalKit /content/SDVN/extensions/TemporalKit
+git clone https://github.com/deforum-art/deforum-for-automatic1111-webui /content/SDVN/extensions/deforum-for-automatic1111-webui
+git clone https://github.com/s9roll7/ebsynth_utility /content/SDVN/extensions/ebsynth_utility
+git clone https://github.com/volotat/SD-CN-Animation /content/SDVN/extensions/SD-CN-Animation
+git clone https://github.com/AbyszOne/Abysz-LAB-Ext /content/SDVN/extensions/Abysz-LAB-Ext
