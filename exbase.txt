@@ -1,25 +1,20 @@
-git clone https://github.com/phamhungd/sd-webui-tunnels/ /content/SDVN/extensions/Tunnels
 git clone https://github.com/kohya-ss/sd-webui-additional-networks /content/SDVN/extensions/Additional-networks
 git clone https://github.com/Mikubill/sd-webui-controlnet /content/SDVN/extensions/sd-webui-controlnet
 git clone https://github.com/fkunn1326/openpose-editor /content/SDVN/extensions/Openpose-editor
-git clone https://github.com/phamhungd/sd-webui-lora-block-weight /content/SDVN/extensions/Block-weight
+git clone https://github.com/hako-mikan/sd-webui-lora-block-weight /content/SDVN/extensions/Block-weight
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper /content/SDVN/extensions/AR-helper
 git clone https://github.com/hako-mikan/sd-webui-supermerger /content/SDVN/extensions/Supermerger
 git clone https://github.com/adieyal/sd-dynamic-prompts /content/SDVN/extensions/Dynamic-prompts
-git clone https://github.com/zanllp/sd-webui-infinite-image-browsing /content/SDVN/extensions/Image-browsing
 git clone https://github.com/ashen-sensored/stable-diffusion-webui-two-shot /content/SDVN/extensions/A5-Two-shot
 git clone https://github.com/AIrjen/OneButtonPrompt /content/SDVN/extensions/OneButtonPrompt
 git clone https://github.com/ParisNeo/prompt_translator /content/SDVN/extensions/A1-Prompt_translator
 git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris /content/SDVN/extensions/Lycoris
 git clone https://github.com/hako-mikan/sd-webui-regional-prompter /content/SDVN/extensions/A6-Regional-prompter
 git clone https://github.com/Bing-su/Adetailer /content/SDVN/extensions/A2-Adetailer
-git clone -b sdvn https://github.com/phamhungd/sd-civitai-browser /content/SDVN/extensions/Civitai
+git clone -b sdvn https://github.com/Vetchems/sd-civitai-browser /content/SDVN/extensions/Civitai
 git clone https://github.com/huchenlei/sd-webui-openpose-editor /content/SDVN/extensions/OpenposeEditor
 git clone https://github.com/mcmonkeyprojects/sd-dynamic-thresholding /content/SDVN/extensions/Dynamic-CFG
-git clone https://github.com/ashen-sensored/sd_webui_SAG /content/SDVN/extensions/SAG
 git clone https://git.mmaker.moe/mmaker/sd-webui-color-enhance.git /content/SDVN/extensions/Color-enhance
 git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete /content/SDVN/extensions/Tagcomplete
-git clone https://github.com/phamhungd/faceswapper /content/SDVN/extensions/Faceswap
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/inswapper_128.onnx -d /content/SDVN/extensions/Faceswap -o inswapper_128.onnx
-#git clone https://github.com/s0md3v/sd-webui-roop /content/SDVN/extensions/Roop
-#git clone https://github.com/richrobber2/canvas-zoom /content/SDVN/extensions/Canvas-zoom
+git clone https://github.com/IntellectzProductions/sd-webui-faceswap /content/SDVN/extensions/RoopSD
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/datasets/bstungnguyen/Deepfake/resolve/main/inswapper_128.onnx -d /content/SDVN/models/RoopSD -o inswapper_128.onnx
