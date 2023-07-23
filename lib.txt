@@ -1,6 +1,11 @@
+git clone https://huggingface.co/embed/negative /content/SDVN/embeddings/negative
+git clone https://huggingface.co/embed/lora /content/SDVN/models/Lora/positive
 git clone https://github.com/camenduru/stable-diffusion-webui-scripts /content/SDVN/scripts
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/4x-UltraSharp.ckpt -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/4x-RealisticRescaler.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/params.txt -d /content/SDVN/ -o params.txt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
+ln -s /content/SDVN/models/Lora /content/drive/MyDrive/SD-Data/Lora
+ln -s /content/SDVN/embeddings /content/drive/MyDrive/SD-Data/Embeddings
+ln -s /content/SDVN/models/Lora /content/drive/MyDrive/SD-Data/Lyco
