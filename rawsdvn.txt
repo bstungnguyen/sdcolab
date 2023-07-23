@@ -1,0 +1,80 @@
+git clone -b v2-16 https://github.com/phamhungd/SDVN-Legacy /content/SDVN
+git clone -b v2-23 https://github.com/phamhungd/SDVN
+git clone -b v2-28 https://github.com/phamhungd/SDVN
+git clone https://github.com/phamhungd/SDVN
+git clone -b SDXL https://github.com/phamhungd/SDVN
+git clone -b oldver https://github.com/phamhungd/sd-webui-llul /content/SDVN/extensions/B-Llul
+git clone https://github.com/AbdullahAlfaraj/Auto-Photoshop-StableDiffusion-Plugin.git /content/SDVN/extensions/Auto-Photoshop
+git clone https://github.com/phamhungd/sd-webui-llul /content/SDVN/extensions/B-Llul
+git clone https://huggingface.co/phamhungd/Prunedcontrolnet /content/Basecontrolnet
+git clone https://huggingface.co/phamhungd/Basecontrolnet /content/Basecontrolnet
+ln -s /content/Basecontrolnet /content/SDVN/extensions/sd-webui-controlnet/models/
+
+git clone https://huggingface.co/phamhungd/Extracontrolnet /content/Extracontrolnet
+ln -s /content/Extracontrolnet /content/SDVN/extensions/sd-webui-controlnet/models/
+
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/4x-UltraSharp.ckpt -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://stablediffusion.vn/wp-content/uploads/Colab/script/run_n_times.txt -d /content/SDVN/scripts -o run_n_times.py
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://stablediffusion.vn/wp-content/uploads/Colab/script/loopback_wave.txt -d /content/SDVN/scripts -o loopback_wave.py
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://stablediffusion.vn/wp-content/uploads/Colab/script/multi_frame_render.txt -d /content/SDVN/scripts -o multi_frame_render.py
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/params.txt -d /content/SDVN/ -o params.txt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/ui-config.json -d /content/SDVN/ -o ui-config.json
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/4x-RealisticRescaler.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
+rm /content/SDVN/html/card-no-preview.png
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/card-no-preview.png -d /content/SDVN/html
+rm /content/SDVN/style.css
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/style.css -d /content/SDVN/
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/localization.json -d /content/SDVN/localizations
+rm /content/SDVN/html/footer.html
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/footer.txt -d /content/SDVN/html -o footer.html
+
+#aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-ema-original/resolve/main/vae-ft-ema-560000-ema-pruned.safetensors -d /content/SDVN/models/Stable-diffusion -o VAE56.vae.pt
+#aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Waifu-anime.vae.pt -d /content/SDVN/models/Stable-diffusion -o Waifu-anime.vae.pt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/phamhungd/GuoZovya/resolve/main/Anime-fp16.vae.pt -d /content/SDVN/models/Stable-diffusion -o Anime.vae.pt
+
+mkdir /content/drive/MyDrive/SD-Data/
+mkdir /content/drive/MyDrive/SD-Data/Model
+mkdir /content/drive/MyDrive/SD-Data/Lora
+mkdir /content/drive/MyDrive/SD-Data/Embeddings
+mkdir /content/drive/MyDrive/SD-Data/wildcards
+mkdir /content/drive/MyDrive/SD-Data/Hypernetworks
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/config.json -d /content/drive/MyDrive/SD-Data/Setting15 -o config.json
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
+mkdir /content/drive/MyDrive/SD-Data/Lyco
+rm /content/drive/MyDrive/SD-Data/Setting15/style.csv
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v2/fullver/MyExtensionList.txt -d /content/drive/MyDrive/SD-Data/wildcards -o MyExtensionList.txt
+rm -r /content/drive/MyDrive/SD-Data/Setting15
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/config.json -d /content/drive/MyDrive/SD-Data/Setting15 -o config.json
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v15/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/v2/fullver/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
+git clone https://huggingface.co/phamhungd/clone /content/clone
+git clone https://github.com/phamhungd/WC-SDVN /content/WC-SDVN
+ln -s /content/drive/MyDrive/SD-Data/Lora /content/SDVN/extensions/Additional-networks/models/lora
+ln -s /content/drive/MyDrive/SD-Data/wildcards /content/SDVN/extensions/Dynamic-prompts/
+rm /content/drive/MyDrive/SD-Data/Embeddings/Negative
+ln -s /content/clone/Negative /content/drive/MyDrive/SD-Data/Embeddings
+rm /content/drive/MyDrive/SD-Data/Lora/Lora
+ln -s /content/clone/Lora /content/drive/MyDrive/SD-Data/Lora
+rm /content/drive/MyDrive/SD-Data/wildcards/WC-SDVN
+ln -s /content/WC-SDVN /content/drive/MyDrive/SD-Data/wildcards
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/117136 -d /content/SDVN/models/Stable-diffusion -o SDVN3-RealArt.safetensors
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M http://stablediffusion.vn/wp-content/uploads/Colab/SDVN3-RealArt.jpg -d /content/SDVN/models/Stable-diffusion
+git clone -b fullver https://github.com/phamhungd/sdvn-auto /content/SDVN
+
+git clone https://github.com/camenduru/a1111-sd-webui-locon /content/SDVN/extensions/A1111-Locon
+git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-locon /content/SDVN/extensions/A1111-Locon
+
+extensions/sd-webui-controlnet/models
+git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris
+
+rm -r /content/SDVN/extensions/A0-LLui
+rm -r /content/SDVN/extensions/A1-Prompt_translator
+rm -r /content/SDVN/extensions/A2-Adetailer
+rm -r /content/SDVN/extensions/A5-Two-shot
+rm -r /content/SDVN/extensions/A6-Regional-prompter
+rm -r /content/SDVN/extensions/Additional-networks
+rm -r /content/SDVN/extensions/Dynamic-prompts
+rm -r /content/SDVN/extensions/Block-weight
+rm -r /content/SDVN/extensions/Faceswap
