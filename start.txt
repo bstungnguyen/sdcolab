@@ -13,8 +13,6 @@ pip install -q torch==2.0.0+cu118 torchvision==0.15.1+cu118 torchaudio==2.0.1+cu
 pip install -q xformers==0.0.19 triton==2.0.0 -U
 
 git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
-git clone https://huggingface.co/embed/negative /content/SDVN/embeddings/negative
-git clone https://huggingface.co/embed/lora /content/SDVN/models/Lora/positive
 sample= !ls /content/drive/MyDrive/SD-Data/Lyco
 if sample == ["ls: cannot access '/content/drive/MyDrive/SD-Data/Lyco': No such file or directory"] :
   print("Khởi tạo thư mục lần đầu")
@@ -34,6 +32,3 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://hugging
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/114367 -d /content/SDVN/models/Stable-diffusion -o Realistic Vision V4.0.safetensors
 
 ln -s /content/SDVN/models/Stable-diffusion /content/drive/MyDrive/SD-Data/Model
-ln -s /content/SDVN/models/Lora /content/drive/MyDrive/SD-Data/Lora
-ln -s /content/SDVN/embeddings /content/drive/MyDrive/SD-Data/Embeddings
-ln -s /content/SDVN/models/Lora /content/drive/MyDrive/SD-Data/Lyco
