@@ -1,1 +1,2 @@
 ln -s /content/SDVN/models/Stable-diffusion /content/drive/MyDrive/SD-Data/Model
+ln -s /content/Basecontrolnet /content/SDVN/extensions/sd-webui-controlnet/models/
