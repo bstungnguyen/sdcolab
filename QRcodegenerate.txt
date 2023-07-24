@@ -1,0 +1,6 @@
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/DionTimmer/controlnet_qrcode-control_v1p_sd15/resolve/main/control_v1p_sd15_qrcode.safetensors -d /content/Basecontrolnet/QRCodeGenerate -o QRcode.safetensors
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/DionTimmer/controlnet_qrcode-control_v1p_sd15/resolve/main/control_v1p_sd15_qrcode.yaml -d /content/Basecontrolnet/QRCodeGenerate -o QRcode.yaml
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster/resolve/main/control_v1p_sd15_qrcode_monster.safetensors -d /content/Basecontrolnet/QRCodeGenerate -o QRcode-monster.safetensors
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/monster-labs/control_v1p_sd15_qrcode_monster/resolve/main/control_v1p_sd15_qrcode_monster.yaml -d /content/Basecontrolnet/QRCodeGenerate -o QRcode-monster.yaml
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/111973 -d /content/Basecontrolnet/QRCodeGenerate -o QRcode-Pattern.safetensors
+git clone https://github.com/missionfloyd/webui-qrcode-generator /content/SDVN/extensions/Qrcode-generator
