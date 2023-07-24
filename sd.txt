@@ -7,3 +7,13 @@ rm /content/drive/MyDrive/SD-Data/Setting15/style.csv
 rm -r /content/drive/MyDrive/SD-Data/Setting15
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/config.json -d /content/drive/MyDrive/SD-Data/Setting15 -o config.json
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
+
+rm -r /content/SDVN/extensions/A0-LLui
+rm -r /content/SDVN/extensions/A1-Prompt_translator
+rm -r /content/SDVN/extensions/A2-Adetailer
+rm -r /content/SDVN/extensions/A5-Two-shot
+rm -r /content/SDVN/extensions/A6-Regional-prompter
+rm -r /content/SDVN/extensions/Additional-networks
+rm -r /content/SDVN/extensions/Dynamic-prompts
+rm -r /content/SDVN/extensions/Block-weight
+rm -r /content/SDVN/extensions/Faceswap
