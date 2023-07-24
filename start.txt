@@ -30,5 +30,3 @@ rm /content/SDVN/style.css
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/style.css -d /content/SDVN/
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/114367 -d /content/SDVN/models/Stable-diffusion -o Realistic Vision V4.0.safetensors
-
-ln -s /content/SDVN/models/Stable-diffusion /content/drive/MyDrive/SD-Data/Model
