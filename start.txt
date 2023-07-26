@@ -15,5 +15,10 @@ pip install -q xformers==0.0.19 triton==2.0.0 -U
 git clone https://github.com/Mikubill/sd-webui-controlnet /content/SDVN/extensions/sd-webui-controlnet
 git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
 
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_canny.pth -d /content/Basecontrolnet -o control_v11p_sd15_canny.pth
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11f1p_sd15_depth.pth -d /content/Basecontrolnet -o control_v11f1p_sd15_depth.pth
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_lineart.pth -d /content/Basecontrolnet -o control_v11p_sd15_lineart.pth
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.pth -d /content/Basecontrolnet -o control_v11p_sd15_openpose.pth
+
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/114367 -d /content/SDVN/models/Stable-diffusion -o RealisticVisionV4.safetensors
