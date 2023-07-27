@@ -13,4 +13,4 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://hugging
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_seg.pth -d /content/Basecontrolnet -o control_v11p_sd15_seg.pth
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15s2_lineart_anime.pth -d /content/Basecontrolnet -o control_v11p_sd15s2_lineart_anime.pth
 
-ln -s /content/Basecontrolnet /content/SDVN/extensions/sd-webui-controlnet/models/
+ln -s /content/Basecontrolnet/* /content/SDVN/extensions/sd-webui-controlnet/models/
