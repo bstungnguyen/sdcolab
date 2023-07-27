@@ -15,9 +15,11 @@ pip install -q xformers==0.0.19 triton==2.0.0 -U
 git clone https://github.com/Mikubill/sd-webui-controlnet /content/SDVN/extensions/sd-webui-controlnet
 git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
 git clone https://github.com/kohya-ss/sd-webui-additional-networks /content/SDVN/extensions/Additional-networks
+git clone https://github.com/Vetchems/sd-civitai-browser /content/SDVN/extensions/Civitai
 git clone https://github.com/huchenlei/sd-webui-openpose-editor /content/SDVN/extensions/OpenposeEditor
 git clone https://github.com/hako-mikan/sd-webui-lora-block-weight /content/SDVN/extensions/Block-weight
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper /content/SDVN/extensions/AR-helper
+git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui-wildcards /content/SDVN/extensions/Wildcards
 git clone https://github.com/adieyal/sd-dynamic-prompts /content/SDVN/extensions/Dynamic-prompts
 git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris /content/SDVN/extensions/Lycoris
 git clone https://github.com/hako-mikan/sd-webui-regional-prompter /content/SDVN/extensions/A6-Regional-prompter
@@ -26,7 +28,6 @@ git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete /content/SDV
 git clone https://git.mmaker.moe/mmaker/sd-webui-color-enhance.git /content/SDVN/extensions/Color-enhance
 
 git clone https://huggingface.co/embed/negative /content/SDVN/embeddings/negative
-git clone https://huggingface.co/embed/lora /content/SDVN/models/Lora/positive
 git clone https://github.com/phamhungd/WC-SDVN /content/WC-SDVN
 git clone https://github.com/camenduru/stable-diffusion-webui-scripts /content/SDVN/addscripts
 
@@ -36,3 +37,5 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://hugging
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/114367 -d /content/SDVN/models/Stable-diffusion -o RealisticVisionV4.safetensors
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/Stable-diffusion -o VAE84.vae.pt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/holwech/realistic-rescaler-real-esrgan/resolve/main/4x_RealisticRescaler_100000_G.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
