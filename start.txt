@@ -40,7 +40,8 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://hugging
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/localization.json -d /content/SDVN/localizations
 aria2c --conditional-get https://huggingface.co/bstungnguyen/SDColab/resolve/main/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/114367 -d /content/SDVN/models/Stable-diffusion -o RealisticVisionV4.safetensors
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/125411 -d /content/SDVN/models/Stable-diffusion -o RealisticVisionV5.safetensors
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/81b08d96-8a6e-4c3e-a3c3-8e4aadbfaa71/width=640/00000-748799940.jpeg -d /content/SDVN/models/Stable-diffusion
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/VAE -o VAE84.vae.pt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/holwech/realistic-rescaler-real-esrgan/resolve/main/4x_RealisticRescaler_100000_G.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
