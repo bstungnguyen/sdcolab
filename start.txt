@@ -22,6 +22,7 @@ git clone https://github.com/Mikubill/sd-webui-controlnet /content/SDVN/extensio
 git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
 git clone https://github.com/kohya-ss/sd-webui-additional-networks /content/SDVN/extensions/Additional-networks
 git clone https://github.com/Vetchems/sd-civitai-browser /content/SDVN/extensions/Civitai
+git clone https://github.com/fkunn1326/openpose-editor /content/SDVN/extensions/Openpose-editor
 git clone https://github.com/huchenlei/sd-webui-openpose-editor /content/SDVN/extensions/OpenposeEditor
 git clone https://github.com/hako-mikan/sd-webui-lora-block-weight /content/SDVN/extensions/Block-weight
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper /content/SDVN/extensions/AR-helper
