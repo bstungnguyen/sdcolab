@@ -17,7 +17,7 @@ mkdir /content/drive/MyDrive/SD-Data/wildcards
 mkdir /content/drive/MyDrive/SD-Data/Hypernetworks
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/config.json -d /content/drive/MyDrive/SD-Data/Setting15 -o config.json
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/styles.csv -d /content/drive/MyDrive/SD-Data/Setting15 -o styles.csv
-
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
 rm -r /content/SDVN/extensions/A0-LLui
 rm -r /content/SDVN/extensions/A1-Prompt_translator
 rm -r /content/SDVN/extensions/A2-Adetailer
@@ -31,5 +31,4 @@ rm -r /content/SDVN/extensions/Faceswap
 ln -s /content/drive/MyDrive/SD-Data/Basecontrolnet1/* /content/SDVN/extensions/sd-webui-controlnet/models/
 ln -s /content/drive/MyDrive/SD-Data/Basecontrolnet2/* /content/SDVN/extensions/sd-webui-controlnet/models/
 
-aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o Ngroktoken.txt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/Ngroktoken.txt -d /content/drive/MyDrive/SD-Data/wildcards -o MyExtensionList.txt
