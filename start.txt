@@ -15,7 +15,6 @@ pip install -q xformers==0.0.19 triton==2.0.0 -U
 rm -r /content/drive/MyDrive/SD-Data/Embeddings/embeddings
 rm -r /content/drive/MyDrive/SD-Data/Embeddings/Negative
 rm -r /content/drive/MyDrive/SD-Data/Lora/Lora
-rm -r /content/drive/MyDrive/SD-Data/Lyco/Lora
 rm -r /content/drive/MyDrive/SD-Data/Model/Stable-diffusion
 rm -r /content/drive/MyDrive/SD-Data/wildcards/WC-SDVN
 
@@ -26,7 +25,6 @@ git clone https://github.com/Vetchems/sd-civitai-browser /content/SDVN/extension
 git clone https://github.com/huchenlei/sd-webui-openpose-editor /content/SDVN/extensions/OpenposeEditor
 git clone https://github.com/hako-mikan/sd-webui-lora-block-weight /content/SDVN/extensions/Block-weight
 git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper /content/SDVN/extensions/AR-helper
-git clone https://github.com/AUTOMATIC1111/stable-diffusion-webui-wildcards /content/SDVN/extensions/Wildcards
 git clone https://github.com/adieyal/sd-dynamic-prompts /content/SDVN/extensions/Dynamic-prompts
 git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris /content/SDVN/extensions/Lycoris
 git clone https://github.com/hako-mikan/sd-webui-regional-prompter /content/SDVN/extensions/A6-Regional-prompter
