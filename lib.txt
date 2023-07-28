@@ -1,2 +1,2 @@
 git clone https://github.com/bstungnguyen/Lora /content/lib/lora
-ln -s /content/lib/lora/* /content/drive/MyDrive/SD-Data/Lora
+ln -s /content/lib/lora/ /content/drive/MyDrive/SD-Data/Lora
