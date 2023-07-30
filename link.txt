@@ -1,4 +1,3 @@
 ln -s /content/SDVN/models/Stable-diffusion/ /content/drive/MyDrive/SD-Data/Model
 ln -s /content/drive/MyDrive/SD-Data/wildcards /content/SDVN/extensions/Dynamic-prompts/
 ln -s /content/drive/MyDrive/SD-Data/Lora /content/SDVN/extensions/Additional-networks/models/lora
-ln -s /content/SDVN/addscripts/* /content/SDVN/scripts
