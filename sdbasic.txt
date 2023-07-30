@@ -32,4 +32,5 @@ git clone https://github.com/camenduru/stable-diffusion-webui-scripts /content/S
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/params.txt -d /content/SDVN/ -o params.txt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/localization.json -d /content/SDVN/localizations
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/125411 -d /content/SDVN/models/Stable-diffusion -o RealisticVisionV5.safetensors
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/VAE -o VAE84.vae.pt
