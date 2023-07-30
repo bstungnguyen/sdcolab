@@ -1,0 +1,33 @@
+apt -y update -qq
+%env LD_PRELOAD=/content/rundata/libtcmalloc_minimal.so.4
+
+pip install -q torch==2.0.0+cu118 torchmetrics==0.11.4 torchvision==0.15.1+cu118 torchaudio==2.0.1+cu118 torchtext==0.15.1 torchdata==0.6.0 --extra-index-url https://download.pytorch.org/whl/cu118 -U
+pip install -q xformers==0.0.19 triton==2.0.0 -U
+
+rm -r /content/drive/MyDrive/SD-Data/Embeddings/embeddings
+rm -r /content/drive/MyDrive/SD-Data/Embeddings/Negative
+rm -r /content/drive/MyDrive/SD-Data/Lora/Lora
+rm -r /content/drive/MyDrive/SD-Data/Model/Stable-diffusion
+rm -r /content/drive/MyDrive/SD-Data/wildcards/WC-SDVN
+
+git clone https://github.com/bstungnguyen/stablediffusion /content/SDVN
+git clone https://github.com/Mikubill/sd-webui-controlnet /content/SDVN/extensions/sd-webui-controlnet
+git clone https://github.com/camenduru/sd-webui-tunnels /content/SDVN/extensions/sd-webui-tunnels
+git clone https://github.com/kohya-ss/sd-webui-additional-networks /content/SDVN/extensions/Additional-networks
+git clone https://github.com/Vetchems/sd-civitai-browser /content/SDVN/extensions/Civitai
+git clone https://github.com/fkunn1326/openpose-editor /content/SDVN/extensions/Openpose-editor
+git clone https://github.com/huchenlei/sd-webui-openpose-editor /content/SDVN/extensions/OpenposeEditor
+git clone https://github.com/hako-mikan/sd-webui-lora-block-weight /content/SDVN/extensions/Block-weight
+git clone https://github.com/thomasasfk/sd-webui-aspect-ratio-helper /content/SDVN/extensions/AR-helper
+git clone https://github.com/adieyal/sd-dynamic-prompts /content/SDVN/extensions/Dynamic-prompts
+git clone https://github.com/KohakuBlueleaf/a1111-sd-webui-lycoris /content/SDVN/extensions/Lycoris
+git clone https://github.com/hako-mikan/sd-webui-regional-prompter /content/SDVN/extensions/A6-Regional-prompter
+git clone https://github.com/Bing-su/Adetailer /content/SDVN/extensions/A2-Adetailer
+git clone https://github.com/DominikDoom/a1111-sd-webui-tagcomplete /content/SDVN/extensions/Tagcomplete
+git clone https://git.mmaker.moe/mmaker/sd-webui-color-enhance.git /content/SDVN/extensions/Color-enhance
+
+git clone https://github.com/camenduru/stable-diffusion-webui-scripts /content/SDVN/addscripts
+
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/params.txt -d /content/SDVN/ -o params.txt
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/ui-config.json -d /content/SDVN/ -o ui-config.json
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/localization.json -d /content/SDVN/localizations
