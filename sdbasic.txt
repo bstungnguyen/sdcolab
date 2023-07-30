@@ -1,3 +1,4 @@
+apt -y install -qq aria2
 apt -y update -qq
 %env LD_PRELOAD=/content/rundata/libtcmalloc_minimal.so.4
 
