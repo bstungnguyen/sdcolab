@@ -1,2 +1,0 @@
-git clone -b v2-28 https://github.com/phamhungd/SDVN /content/SDVN
-git clone -b sdvn https://github.com/bstungnguyen/sd-webui-tunnels/ /content/SDVN/extensions/Tunnels
