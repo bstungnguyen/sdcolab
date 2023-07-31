@@ -28,7 +28,7 @@ rm -r /content/SDVN/extensions/Dynamic-prompts
 rm -r /content/SDVN/extensions/Block-weight
 rm -r /content/SDVN/extensions/Faceswap
 
-ln -s /content/drive/MyDrive/SD-Data/Basecontrolnet1/* /content/SDVN/extensions/sd-webui-controlnet/models/
-ln -s /content/drive/MyDrive/SD-Data/Basecontrolnet2/* /content/SDVN/extensions/sd-webui-controlnet/models/
+ln -s /content/drive/MyDrive/SD-Data/Basecontrolnet1 /content/SDVN/extensions/sd-webui-controlnet/models/
+ln -s /content/drive/MyDrive/SD-Data/Basecontrolnet2 /content/SDVN/extensions/sd-webui-controlnet/models/
 
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/bstungnguyen/SDColab/resolve/main/MyExtensionList.txt -d /content/drive/MyDrive/SD-Data/wildcards -o MyExtensionList.txt
