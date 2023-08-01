@@ -29,5 +29,7 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/stabilityai/sd-vae-ft-mse-original/resolve/main/vae-ft-mse-840000-ema-pruned.ckpt -d /content/SDVN/models/VAE -o VAE84.vae.pt
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/embed/upscale/resolve/main/4x-UltraSharp.pth -d /content/SDVN/models/ESRGAN -o 4x-UltraSharp.pth
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/holwech/realistic-rescaler-real-esrgan/resolve/main/4x_RealisticRescaler_100000_G.pth -d /content/SDVN/models/ESRGAN -o 4x-RealisticRescaler.pth
+aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai.com/api/download/models/31284 -d /content/SDVN/models/Lora -o KoreanDollLikeness(v2.0).safetensors
 
-ln -s /content/SDVN/models/Stable-diffusion/ /content/drive/MyDrive/SD-Data/Model
+ln -s /content/SDVN/models/Stable-diffusion/* /content/drive/MyDrive/SD-Data/Model
+ln -s /content/SDVN/models/Lora/* /content/drive/MyDrive/SD-Data/Lora
