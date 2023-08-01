@@ -36,3 +36,4 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://hugging
 ln -s /content/SDVN/models/Stable-diffusion/* /content/drive/MyDrive/SD-Data/Model
 ln -s /content/SDVN/models/Lora/* /content/drive/MyDrive/SD-Data/Lora
 ln -s /content/drive/MyDrive/SD-Data/Lora/* /content/SDVN/extensions/Additional-networks/models/lora
+ln -s /content/drive/MyDrive/SD-Data/wildcards/* /content/SDVN/extensions/Dynamic-prompts/
