@@ -34,5 +34,5 @@ aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://civitai
 aria2c --continue --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/lllyasviel/ControlNet-v1-1/resolve/main/control_v11p_sd15_openpose.pth -d /content/SDVN/extensions/sd-webui-controlnet/models -o control_v11p_sd15_openpose.pth
 
 ln -s /content/SDVN/models/Stable-diffusion/* /content/drive/MyDrive/SD-Data/Model
-ln -s /content/SDVN/models/Lora/* /content/drive/MyDrive/SD-Data/Lora
+ln -s /content/SDVN/models/Lora /content/drive/MyDrive/SD-Data/Lora
 ln -s /content/drive/MyDrive/SD-Data/Lora/* /content/SDVN/extensions/Additional-networks/models/lora
