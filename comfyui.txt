@@ -1,7 +1,6 @@
 
-%cd /content/drive/MyDrive
 
-[ ! -d $WORKSPACE ] && echo -= Initial setup ComfyUI =- && git clone https://github.com/comfyanonymous/ComfyUI
+git clone https://github.com/comfyanonymous/ComfyUI
 %cd $WORKSPACE
 
 echo -= Install dependencies =-
