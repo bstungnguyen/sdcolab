@@ -1,19 +1,10 @@
-if OPTIONS['USE_GOOGLE_DRIVE']:
-    echo "Mounting Google Drive..."
-    %cd /
-    
-    from google.colab import drive
-    drive.mount('/content/drive')
+from google.colab import drive
+drive.mount('/content/drive')
 
-    WORKSPACE = "/content/drive/MyDrive/ComfyUI"
-    %cd /content/drive/MyDrive
+%cd /content/drive/MyDrive
 
 [ ! -d $WORKSPACE ] && echo -= Initial setup ComfyUI =- && git clone https://github.com/comfyanonymous/ComfyUI
 %cd $WORKSPACE
-
-if OPTIONS['UPDATE_COMFY_UI']:
-  echo -= Updating ComfyUI =-
-  git pull
 
 echo -= Install dependencies =-
 pip install xformers!=0.0.18 -r requirements.txt --extra-index-url https://download.pytorch.org/whl/cu118 --extra-index-url https://download.pytorch.org/whl/cu117
