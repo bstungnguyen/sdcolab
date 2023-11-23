@@ -141,7 +141,10 @@ sd-1/lora/Nudify XL:
    recommended: True
 sd-1/lora/KoreanDollLikeness2:
    path: https://civitai.com/api/download/models/31284
-   recommended: True   
+   recommended: True 
+sd-1/lora/DollLikenesscloths:
+   path: https://civitai.com/api/download/models/232848?type=Model&format=SafeTensor
+   recommended: True
 sd-1/lora/Ink scenery:
    path: https://civitai.com/api/download/models/83390
    recommended: False
